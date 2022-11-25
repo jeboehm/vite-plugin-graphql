@@ -39,13 +39,10 @@ export default defineConfig(({mode}) => {
 ## Usage
 
 ```js
+// query is the default export
 import {query, queryId} from './graphql/getUsers.graphql';
 
+// query is either an object or string
 console.log('Query:', query);
 console.log('Query ID:', queryId);
-
-// default
-import queryAsString from './graphql/getUsers.graphql';
-
-console.log('Query:', queryAsString);
 ```

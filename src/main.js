@@ -73,7 +73,7 @@ const getCode = async (src) => {
 
   if (config.queries.usePersistentQuery) {
     return `
-    export const query = \`${createPersistentQuery(sha256Hash)}\`;
+    export const query = Object.freeze(JSON.parse('${createPersistentQuery(sha256Hash)}'));
     export const queryId = '${sha256Hash}';
 
     export default query;
@@ -105,7 +105,7 @@ const transform = async (src, id) => {
   return { code, map: null };
 };
 
-export default function VitePluginGraphQL(overrideConfig = config) {
+module.exports = function VitePluginGraphQL(overrideConfig = config) {
   Object.assign(config.hashMap, overrideConfig.hashMap);
   Object.assign(config.queries, overrideConfig.queries);
 
