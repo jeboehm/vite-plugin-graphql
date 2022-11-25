@@ -1,0 +1,35 @@
+{
+  "name": "@jeboehm/vite-plugin-graphql",
+  "version": "1.0.0",
+  "description": "Imports .graphql files as persistent query extension or as they are",
+  "main": "bundle.js",
+  "scripts": {
+    "build": "node ./build.js",
+    "demo:build": "node ./build.js && cd demo/ && vite build",
+    "demo:serve": "node ./build.js && cd demo/ && vite serve",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeboehm/vite-plugin-graphql.git"
+  },
+  "keywords": [
+    "vite-plugin",
+    "vite",
+    "graphql",
+    "persistent-query"
+  ],
+  "author": "Jeffrey Boehm <j.boehm@ressourcenkonflikt.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeboehm/vite-plugin-graphql/issues"
+  },
+  "homepage": "https://github.com/jeboehm/vite-plugin-graphql#readme",
+  "peerDependencies": {
+    "apollo-utilities": "*",
+    "graphql": "^14.0.0 || ^15.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.15.15",
+    "vite": "^3.2.4"
+  }
+}

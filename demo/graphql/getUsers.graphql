@@ -1,0 +1,19 @@
+query ($id: ID!) {
+    user: user(user: {id: $id}) {
+        id
+        name
+        amountBooked
+        amountPerformed
+        notes
+        bookings {
+            id
+            date
+            amount
+            rate {
+                id
+                name
+                rate
+            }
+        }
+    }
+}
