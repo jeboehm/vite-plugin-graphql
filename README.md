@@ -1,4 +1,6 @@
 # vite-plugin-graphql
+[![Node.js CI](https://github.com/jeboehm/vite-plugin-graphql/actions/workflows/test.yaml/badge.svg)](https://github.com/jeboehm/vite-plugin-graphql/actions/workflows/test.yaml)
+
 This plugin is used to import GraphQL queries.
 
 It will transform the query into a string, either as a persisted query or a raw, normalized query. To use persisted queries server side
