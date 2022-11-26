@@ -3,9 +3,11 @@
 
 This plugin is used to import GraphQL queries.
 
-It will transform the query into a string, either as a persisted query or a raw, normalized query. To use persisted queries server side
-a hash map is written to a file.
-If needed, the magic field __typename can be added to all query fields.
+## Features
+- Import normalized queries as string type
+- Collect all used queries / mutation in the application and transmit only hashes to save bandwidth using persistent queries
+- Builds a persistent query hash map for use on server side
+- Automatically add `__typename` to requested types in queries
 
 ## Getting started
 Install the plugin:
@@ -18,7 +20,7 @@ Add the plugin to your `vite.config.js`:
 
 ```js
 import { defineConfig } from 'vite';
-import VitePluginGraphQL from 'vite-plugin-graphql';
+import VitePluginGraphQL from '@jeboehm/vite-plugin-graphql';
 
 export default defineConfig(({mode}) => {
   return {
