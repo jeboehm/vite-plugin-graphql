@@ -1,6 +1,6 @@
 {
   "name": "@jeboehm/vite-plugin-graphql",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Imports .graphql files as persistent query extension or as they are",
   "main": "bundle.js",
   "scripts": {
@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/jeboehm/vite-plugin-graphql#readme",
   "peerDependencies": {
-    "vite": "^3"
+    "vite": "^3 || ^4"
   },
   "devDependencies": {
     "apollo-utilities": "*",
